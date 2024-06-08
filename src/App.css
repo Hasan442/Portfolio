@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header {
+    background-color: #ead7c3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header ul li {
+    @apply px-2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header ul li a {
+    @apply hover:text-blue-100;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
+.main-section {
+    @apply flex flex-col md:flex-row px-5 py-32 justify-center;
+    background-color: #ead7c3;
+    transition-duration: 100ms;
 }
 
-.App-link {
-  color: #61dafb;
+.mainsection-div {
+    @apply md:w-1/2 flex flex-col;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainsection-div-h1 {
+    @apply text-black text-6xl font-main-font;
+}
+
+.mainsection-div-h1-span {
+    @apply text-black font-bold;
+}
+
+.mainsection-div-h1-p {
+    @apply text-2xl;
+}
+
+.mainsection-div-div {
+    @apply py-10 flex;
+}
+
+.mainsection-div-div-a {
+    @apply text-center hover:text-gray-700 pr-5;
+}
+
+
+
+.aboutmesec {
+    @apply flex flex-col md:flex-row px-5  overflow-x-hidden;
+    background-color: #fbf6ef;
+}
+
+.aboutmesec-div {
+    @apply py-5 px-10 md:w-1/2;
+}
+
+.aboutmesec-div-div {
+    @apply md:w-1/2 flex;
+}
+
+.aboutmesec-div-div-div {
+    @apply flex flex-col justify-center text-black;
+}
+
+.aboutmesec-div-div-div-h1 {
+    @apply text-2xl font-bold pb-2 relative inline-block;
+}
+
+.aboutmesec-div-div-div-h1-span {
+    @apply absolute left-0 bottom-0 w-16 border-b-4 border-red-950;
+}
+
+.aboutmesec-div-div-div-p {
+    @apply pb-5;
+}
+
+
+
+.experiencesec {
+    @apply px-5  overflow-x-hidden;
+    background-color: #ead7c3;
+}
+
+.experiencesec-div {
+    @apply w-1/2 flex mt-4;
+}
+
+.experiencesec-div-div {
+    @apply flex flex-col p-4 justify-center text-black relative;
+}
+
+.experiencesec-div-div-h1 {
+    @apply text-2xl font-bold pb-2 ml-5 relative inline-block;
+}
+
+.experiencesec-div-div-h1-span {
+    @apply absolute left-0 bottom-0 w-28 border-b-4 border-red-950;
+}
+
+
+
+
+
+.projectSec {
+    @apply flex flex-col px-5 py-20 justify-center overflow-x-hidden;
+    background-color: #ead7c3;
+}
+
+.resumesec {
+    @apply flex flex-col md:flex-row px-5 overflow-x-hidden;
+    background-color: #fbf6ef;
+}
+
+
+.contactsec {
+    @apply flex flex-col md:flex-row px-5 text-black overflow-x-hidden;
+    background-color: #ead7c3;
+}
+
+.project-section {
+    background-attachment: fixed;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    /* Changed from left: 0; to right: 0; */
+    background-color: #ead7c3;
+    width: 50%;
+    align-content: center;
+    /* This property won't affect the alignment since it's for flexbox containers */
+    height: auto;
+}
+
+.mobile-nav li {
+    @apply text-center w-full h-full border-b-2 p-2 hover:bg-slate-600;
+}
+
+.bg-primary {
+    background-color: rgb(85, 81, 227);
+}
+
+.bg-maincolor {
+    background-color: #2b2d77;
+}
+
+.project-desc {
+    @apply absolute left-0 right-0  bottom-0 top-0 opacity-0 duration-500 hover:opacity-100 rounded-xl bg-slate-200;
+}
+
+.downloadbtn {
+    @apply bg-transparent px-5 py-2 shadow-2xl font-bold hover:border-2 border-white rounded-xl
+}
+
+.viewprojectbtn {
+    @apply bg-transparent text-black shadow-2xl border-0  py-4 flex justify-center px-32 font-bold hover:border-2 border-white rounded-2xl rounded-l-none w-auto md:w-52;
+    background-color: #ead7c3;
+}
+
+/* .socialmedia{
+    @apply ;
+} */
+
+.skillsec {
+    @apply flex flex-col w-full h-auto px-5   overflow-x-hidden;
+    background-color: #fbf6ef;
+}
+.skilsec-div {
+    @apply py-5 px-10 ;
+}
+
+.skillsec-div-div {
+    @apply py-5 px-10;
+}
+
+.Skillborder {
+    @apply bg-transparent px-5 py-2 font-bold w-fit h-auto;
+}
+.skillsec_layout
+{
+    @apply  w-[500px] h-[500px] rounded-3xl shadow-xl bg-slate-500;
+}
+.Skillborder {
+    @apply bg-transparent px-5 py-2 font-bold w-fit h-auto;
+}
+
+.Skillborder h1 {
+    @apply border-b-red-200 border-t-0 border-l-0 border-r-0 w-auto;
+}
+
+.SkillRoundedStyle {
+    @apply bg-transparent px-5 py-2 border-2 border-b-red-950 rounded-full font-light w-auto  mt-4 text-center border-opacity-20
+    shadow-2xl;
+}
+
+.skillslayout_windows
+{
+    @apply h-auto w-auto shadow-2xl rounded-2xl m-5;
+    background-color: #ead7c3;
+}
+.skillslayout_windows_skills
+{
+    @apply flex flex-wrap gap-5 p-5 justify-evenly ;
+}
+.skillslayout_web
+{
+    @apply h-auto w-auto shadow-2xl rounded-xl m-5;
+    background-color: #ead7c3;
+}
+.skillslayout_web_skills
+{
+    @apply  flex flex-wrap gap-5 p-5 justify-evenly;
+}
+.projectdetails {
+    @apply flex flex-col md:flex-row h-[1000px] w-full py-10 px-5 mt-4 rounded-xl overflow-x-hidden;
+    background-color: #ead7c3;
+}
+
+.bullet-points::before {
+    content: "•";
+    margin-right: 10px;
+    /* Adjust the value for more or less spacing */
+}
+
+.bullet-points {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    @apply fixed bottom-10 right-4 p-4 flex text-white w-auto h-10 items-center rounded-2xl;
+    background-color: red;
+}
+
+.sideheadingborder {
+    @apply border-b-4 border-spacing-x-72 border-b-red-950 border-t-0 border-l-0 border-r-0;
+}
+
+.proimg {
+    @apply hover:opacity-35;
+}
+
+html {
+    width: 100vw;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    @apply font-Second-font;
 }
