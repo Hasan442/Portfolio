@@ -1,0 +1,7 @@
+.aboutmesec{
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #fbf6ef;
+}
